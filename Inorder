@@ -27,7 +27,7 @@ void Push(struct Pilha** raiz, struct Node* node){
     *raiz = pilha;
 }
 
-struct Node* Pop(){
+void Pop(){
 
 }
 
@@ -41,8 +41,7 @@ void Inorder(struct Node* raiz){
             atual = atual->left;
         }
 
-        atual = Pop(&pilha);
-        printf("%d\n", atual->valor);
+        Pop(&pilha);
         atual = atual->right;        
     }
 }
